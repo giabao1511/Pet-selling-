@@ -1,0 +1,91 @@
+.dogs-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.dogs {
+  background: #d8e2dc;
+  padding: 1rem;
+  border-radius: 14px;
+  width: 350px;
+  height: 450px;
+  margin-bottom: 1.5rem;
+  display: grid;
+  align-items: center;
+  grid-template-areas:
+    "img info"
+    "img info"
+    "desc desc"
+    "price price"
+    "btn btn";
+}
+
+.dogs-info {
+  grid-area: info;
+}
+
+img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center;
+  transition: 0.4s ease-in-out;
+}
+
+.dogs-img-container {
+  grid-area: img;
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dogs-img-container img:hover {
+  transform: scale(1.2);
+}
+
+.dogs-desc {
+  grid-area: desc;
+}
+
+.dogs-price {
+  grid-area: price;
+  font-weight: 800;
+}
+
+.dogs-btn {
+  grid-area: btn;
+  padding: 0.6rem;
+  cursor: pointer;
+  background: #e8e8e4;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.dogs-btn:hover {
+  background: #0a9396;
+  color: #fff;
+}
+
+.dogs-btn-disabled {
+  grid-area: btn;
+  padding: 0.6rem;
+  cursor: pointer;
+  background: #94d2bd;
+  color: #000;
+  border: none;
+  border-radius: 14px;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.2s ease-in-out;
+  cursor: default;
+}
